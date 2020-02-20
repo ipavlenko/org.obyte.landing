@@ -391,7 +391,7 @@
     }
   }
   &.community-wrap {
-    padding: 72px 0 84px;
+    padding: 72px 1rem 84px;
     background: url('../assets/community-bg.png') center / auto 100% repeat-x;
     .text-block {
       margin: 0 auto;
@@ -468,13 +468,23 @@
 
 @media (max-width: $size-sm) {
   .section {
+    .container {
+      padding: 0;
+    }
     &.modular-hero {
       padding: 100px 1rem 58px;
       .flex-block {
         flex-flow: row wrap;
         .text-block,
-        .img-block {
+        .clip-container {
           max-width: inherit;
+          &:before {
+            top: -50%;
+            left: -50%;
+            background-position: center center;
+            background-size: 60% auto;
+            transform: translate(-29%, 0);
+          }
           svg, object {
             height: 400px;
           }
@@ -532,6 +542,9 @@
       }
     }
     &.timeline-wrap {
+      .container {
+        padding: 0 1rem;
+      }
       h1 {
         margin-bottom: 24px;
         font-size: 24px;
@@ -640,7 +653,7 @@
       }
     }
     &.team-wrap {
-      padding: 60px 0;
+      padding: 60px 1rem;
       &:after {
         right: -216%;
         bottom: -23%;
