@@ -99,6 +99,20 @@
       margin-right: 45px;
       flex-grow: 1;
       box-shadow: 0 10px 30px rgba(74,144,226,0.2);
+      position: relative;
+      &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: (9 / 16) * 100%;
+      }
+      > .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
       img {
         display: block;
         width: 100%;
@@ -516,7 +530,7 @@
     &.smart-contracts {
       padding-bottom: 74px;
       .flex-block {
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         .text-block {
           order: 1;
           h1 {
@@ -537,6 +551,7 @@
         .video-block {
           margin-right: 0;
           max-width: inherit;
+          width: 100%;
           order: 2;
         }
       }
